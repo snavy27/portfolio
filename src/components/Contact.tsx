@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { profile } from "../data/portfolio";
 
 export default function Contact() {
@@ -62,10 +62,10 @@ export default function Contact() {
             value="linkedin.com/in/navalika-sharda"
           />
           <ContactCard
-            href={`tel:${profile.phone.replace(/\s/g, "")}`}
-            icon={<Phone size={18} />}
-            label="Phone"
-            value={profile.phone}
+            href={profile.github}
+            icon={<Github size={18} />}
+            label="GitHub"
+            value="github.com/snavy27"
           />
           <ContactCard
             href="#"

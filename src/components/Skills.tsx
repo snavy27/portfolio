@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import { skills } from "../data/portfolio";
 
+// One accent card (Product) anchors the eye; the rest stay neutral cream
+// so the section reads as a single composition instead of four pastels.
 const groupAccent = [
   "border-terracotta/30 bg-terracotta-tint/50",
-  "border-forest/30 bg-forest-tint/40",
-  "border-gold/40 bg-gold-tint/40",
-  "border-ink/15 bg-cream-200/60",
+  "border-ink/10 bg-cream-50",
+  "border-ink/10 bg-cream-50",
+  "border-ink/10 bg-cream-50",
 ];
 
 export default function Skills() {

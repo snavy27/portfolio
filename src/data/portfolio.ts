@@ -7,10 +7,12 @@ export const profile = {
   linkedin: "https://linkedin.com/in/navalika-sharda",
   github: "https://github.com/snavy27",
   oldSite: "https://snavy27.github.io/",
-  tagline: "Engineer · Founder · Designer · Photographer",
+  tagline: "Engineer · Founder · Designer",
   heroHeadline: "Hello, I'm Navalika.",
   heroSub:
-    "Founding Member at Priceforce.ai (Paris fintech), leading end-to-end product development from user discovery and roadmap to launch, with hands-on experience integrating AI-powered tools and workflows into the product stack. Brings analytical depth and quantitative rigour from experiences at Arx and Wells Fargo.",
+    "Founding product builder driving Priceforce.ai from concept to live product. Engineering depth from Wells Fargo and Visa; quant rigour from Arx and Cogent.",
+  heroForward:
+    "Currently shipping AI-powered pricing intelligence in Paris. Always open to talk product, AI, or live deal work.",
   oneLiner:
     "Founding Member - Head of Engineering & Product at Priceforce.ai. Ex-Wells Fargo & Visa. EM Lyon Grande École, top 2%.",
   about: [
@@ -69,7 +71,7 @@ export const skills = {
     "LLM agents",
     "Gen AI integration",
     "Notion",
-    "Linear",
+    "Figma",
   ],
   Languages: ["English (fluent)", "Hindi (native)", "French (intermediate)"],
 };
@@ -229,13 +231,6 @@ export const projects: Project[] = [
     tags: ["React", "Visa APIs", "NFC"],
     accent: "forest",
   },
-  {
-    title: "Sketches & Photography",
-    subtitle: "Side practice",
-    body: "I draw and photograph for myself, mostly. The discipline of looking at things carefully helps me design better products.",
-    tags: ["Illustration", "Photography"],
-    accent: "gold",
-  },
 ];
 
 export type Certification = {
@@ -256,6 +251,7 @@ export const certifications: Certification[] = [
     issuer: "Anthropic",
     date: "May 2026",
   },
+  { name: "AI in Finance", issuer: "Coursera", date: "2025" },
   { name: "DCF Modeling", issuer: "Coursera", date: "May 2025" },
 ];
 

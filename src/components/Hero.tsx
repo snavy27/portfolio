@@ -96,13 +96,22 @@ export default function Hero() {
               </a>
             </motion.div>
 
-            {/* Stat strip - strictly outside the photo column */}
-            <motion.dl
-              {...fadeUp(0.34)}
-              className="mt-12 grid max-w-md grid-cols-2 gap-6 border-t border-ink/15 pt-6"
+            <motion.p
+              {...fadeUp(0.3)}
+              className="mt-5 max-w-xl font-mono text-xs uppercase tracking-[0.18em] text-ink-muted"
             >
-              <Stat label="Years shipping" value="3+" />
-              <Stat label="EM Lyon cohort" value="Top 2%" />
+              {profile.heroForward}
+            </motion.p>
+
+            {/* Stat strip - number-driven, drawn from real engagements */}
+            <motion.dl
+              {...fadeUp(0.38)}
+              className="mt-12 grid max-w-2xl grid-cols-2 gap-x-6 gap-y-7 border-t border-ink/15 pt-7 sm:grid-cols-4"
+            >
+              <Stat label="Portfolios forecasted" value="$5B+" sub="Wells Fargo" />
+              <Stat label="M&A pipeline" value="€200M+" sub="Arx" />
+              <Stat label="Reporting time cut" value="30%" sub="Cogent" />
+              <Stat label="EM Lyon cohort" value="Top 2%" sub="Grande École" />
             </motion.dl>
           </div>
 
@@ -141,13 +150,18 @@ export default function Hero() {
   );
 }
 
-function Stat({ label, value }: { label: string; value: string }) {
+function Stat({ label, value, sub }: { label: string; value: string; sub?: string }) {
   return (
     <div>
-      <dt className="font-mono text-xs uppercase tracking-widest text-ink-muted">{label}</dt>
+      <dt className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">{label}</dt>
       <dd className="mt-2 font-serif text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
         {value}
       </dd>
+      {sub && (
+        <div className="mt-1 font-mono text-[10px] uppercase tracking-widest text-ink-muted/70">
+          {sub}
+        </div>
+      )}
     </div>
   );
 }
@@ -182,7 +196,7 @@ function HeroPortraitBox() {
       initial={{ opacity: 0, scale: 0.96 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-      className="relative mx-auto w-full max-w-[480px]"
+      className="relative mx-auto w-full max-w-[480px] sm:max-w-[520px] lg:max-w-[560px]"
     >
       {/* Soft offset shadow card behind the frame - adds depth */}
       <div
@@ -229,23 +243,6 @@ function HeroPortraitBox() {
               "linear-gradient(180deg, rgba(250,246,238,0) 60%, rgba(26,22,20,0.18) 100%)",
           }}
         />
-
-        {/* Bottom name plate - clean, calm, grown-up */}
-        <div className="absolute inset-x-0 bottom-0 px-5 py-4">
-          <div className="flex items-center justify-between rounded-2xl border border-ink/15 bg-cream-50/85 px-4 py-2.5 backdrop-blur">
-            <div>
-              <div className="font-serif text-base font-semibold leading-none text-ink">
-                Navalika Sharda
-              </div>
-              <div className="mt-1 font-mono text-[10px] uppercase tracking-widest text-ink-muted">
-                Engineer · Founder · Paris
-              </div>
-            </div>
-            <div className="hidden h-9 w-9 place-items-center rounded-full border border-ink/15 bg-cream-50 sm:grid">
-              <Sparkles size={14} className="text-terracotta" strokeWidth={2} />
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Floating badge - outside the frame, top-right */}
