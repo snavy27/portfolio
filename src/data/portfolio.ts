@@ -110,7 +110,7 @@ export const experiences: Experience[] = [
     location: "Paris, France",
     blurb: "Fintech SaaS for M&A and Private Equity.",
     bullets: [
-      "Built DCF, trading comparables, and precedent transaction analyses, plus the quantitative sections of investor memos and IM/CIMs on live mid-market mandates contributing to a €200M+ deal pipeline.",
+      "Built DCF, trading comparables, and precedent transaction analyses, plus the quantitative sections of investor memos and IM/CIMs on live mid-market mandates contributing to a €20M+ deal pipeline.",
       "Worked alongside senior bankers and PE/strategic buyers on live mandates, with direct exposure to how technical and executive stakeholders consume research and structure investment theses.",
     ],
     tag: "current",
@@ -206,7 +206,7 @@ export const projects: Project[] = [
   {
     title: "M&A Quant Pack",
     subtitle: "Live deal models @ Arx Corporate Finance",
-    body: "DCF, trading comparables, precedent transactions and the quantitative sections of IM/CIMs on live mid-market mandates feeding a €200M+ pipeline.",
+    body: "DCF, trading comparables, precedent transactions and the quantitative sections of IM/CIMs on live mid-market mandates feeding a €20M+ pipeline.",
     tags: ["DCF", "Comps", "Excel", "M&A"],
     accent: "forest",
   },

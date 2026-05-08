@@ -109,7 +109,7 @@ export default function Hero() {
               className="mt-12 grid max-w-2xl grid-cols-2 gap-x-6 gap-y-7 border-t border-ink/15 pt-7 sm:grid-cols-4"
             >
               <Stat label="Portfolios forecasted" value="$5B+" sub="Wells Fargo" />
-              <Stat label="M&A pipeline" value="€200M+" sub="Arx" />
+              <Stat label="M&A pipeline" value="€20M+" sub="Arx" />
               <Stat label="Reporting time cut" value="30%" sub="Cogent" />
               <Stat label="EM Lyon cohort" value="Top 2%" sub="Grande École" />
             </motion.dl>
