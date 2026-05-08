@@ -122,21 +122,15 @@ export default function Hero() {
           <div className="flex animate-marquee whitespace-nowrap font-serif text-2xl italic text-ink-soft sm:text-3xl">
             {Array.from({ length: 2 }).map((_, i) => (
               <div className="flex shrink-0 items-center gap-10 pr-10" key={i}>
-                <Tag>founding engineer</Tag>
+                <Tag>engineer</Tag>
                 <Dot />
-                <Tag>m&amp;a analyst</Tag>
+                <Tag>founder</Tag>
                 <Dot />
-                <Tag>react.js</Tag>
+                <Tag>designer</Tag>
                 <Dot />
-                <Tag>python</Tag>
+                <Tag>builder</Tag>
                 <Dot />
-                <Tag>llm agents</Tag>
-                <Dot />
-                <Tag>dcf models</Tag>
-                <Dot />
-                <Tag>0 → 1 builder</Tag>
-                <Dot />
-                <Tag>paris based</Tag>
+                <Tag>paris</Tag>
                 <Dot />
               </div>
             ))}
