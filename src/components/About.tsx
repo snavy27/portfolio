@@ -57,7 +57,7 @@ export default function About() {
             </motion.blockquote>
 
             {/* What I do tiles */}
-            <div className="mt-14 grid gap-5 sm:grid-cols-2">
+            <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {whatIDo.map((item, i) => (
                 <motion.article
                   key={item.title}

@@ -49,9 +49,11 @@ export default function Hero() {
                 <span className="h-2 w-2 animate-pulse rounded-full bg-terracotta" />
                 Currently in {profile.location}
               </span>
-              <span className="pill">
-                <Briefcase size={12} /> Founding @ Priceforce.ai
-              </span>
+              {profile.currentRoles.map((role) => (
+                <a key={role.label} href={role.href} className="pill hover:bg-cream-200">
+                  <Briefcase size={12} /> {role.label}
+                </a>
+              ))}
             </motion.div>
 
             <motion.h1
@@ -98,7 +100,7 @@ export default function Hero() {
 
             <motion.p
               {...fadeUp(0.3)}
-              className="mt-5 max-w-xl font-mono text-xs uppercase tracking-[0.18em] text-ink-muted"
+              className="mt-5 max-w-xl font-sans text-xs tracking-[0.18em] text-ink-muted"
             >
               {profile.heroForward}
             </motion.p>
@@ -131,16 +133,12 @@ export default function Hero() {
           <div className="flex animate-marquee whitespace-nowrap font-serif text-2xl italic text-ink-soft sm:text-3xl">
             {Array.from({ length: 2 }).map((_, i) => (
               <div className="flex shrink-0 items-center gap-10 pr-10" key={i}>
-                <Tag>engineer</Tag>
-                <Dot />
-                <Tag>founder</Tag>
-                <Dot />
-                <Tag>designer</Tag>
-                <Dot />
-                <Tag>builder</Tag>
-                <Dot />
-                <Tag>paris</Tag>
-                <Dot />
+                {profile.marqueeKeywords.map((word) => (
+                  <span key={word} className="flex items-center gap-10">
+                    <Tag>{word}</Tag>
+                    <Dot />
+                  </span>
+                ))}
               </div>
             ))}
           </div>
